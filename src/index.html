@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Allo</title>
+  </head>
+  <body
+    class="bg-[url('./assests/img/bg_gris.svg')] bg-center bg-cover bg-fixed grid grid-cols-4 gap-x-4 lg:grid-cols-12 lg:gap-x-5">
+    <header class="col-span-4 lg:col-span-12">
+      <aside class="dialog z-10" id="menu-mobile">
+        <nav class="w-[350px] bg-grey justify-self-end relative overlay">
+          <img
+          class="btn--close cursor-pointer top-4 right-4 absolute "
+          src="./assests/img/icone/close.svg"
+          alt=""/>
+          <ul class="grid gap-4 p-8 font-bebas text-2xl ">
+            <li ><a class="hover:underline" href="./index.html">Acceuil</a></li>
+            <li ><a class="hover:underline" href="./produits.html">Produits</a></li>
+            <li ><a class="hover:underline" href="./contact.html">Contact</a></li>
+            <li ><a class="hover:underline" href="./propos.html">à propos</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <nav class="flex justify-between items-center p-6">
+        <a href="./index.html">
+          <img src="./assests/img/logo-banner/logo.svg" alt="logo skate" />
+        </a>
+        <ul class="hidden lg:flex gap-20 w-[60%] uppercase font-bebas text-2xl">
+          <li><a href="./index.html" >Acceuil</a></li>
+          <li><a href="./produits.html">Produits</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./propos.html">à propos</a></li>
+        </ul>
+        <div class="flex gap-5">
+          <button class="hidden lg:block">
+            <img src="./assests/img/icone/user.svg" alt="" />
+          </button>
+          <button>
+            <img
+              data-dialog="#cart"
+              src="./assests/img/icone/cart.svg"
+              alt=""/>
+          </button>
+          <button class="lg:hidden" aria-label="Ouvrir le menu">
+            <img
+              data-dialog="#menu-mobile"
+              src="./assests/img/icone/menu.svg"
+              alt="icone de menu-mobile"/>
+          </button>
+        </div>
+        <aside id="cart" class="dialog z-10">
+          <div class="w-[350px] bg-withe justify-self-end overlay">
+            <h3>Panier</h3>
+            <main class="cart__items"></main>
+            <footer class="cart__total">$0.00</footer>
+          </div>
+        </aside>
+      </nav>
+    </header>
+    <main class="col-span-4 grid lg:col-span-10 lg:col-start-2 lg:col-end-12 ">
+      <section class="lg:flex grid lg:items-center lg:justify-center lg:gap-10">
+        <figure class="w-[350px] h-[280px]   lg:h-[700px] lg:w-[620px] place-self-center -translate-y-1/4 lg:-translate-y-0  lg:order-1">
+          <picture>
+              <source media="(min-width:768px)" srcset="./assests/img/logo-banner/banner_desktop.svg">
+              <img class="w-full" src="./assests/img/logo-banner/banner_mobile.svg" alt="">
+          </picture>
+      </figure>
+      <div class="p-10 grid gap-8 lg:gap-20 md:w-[650px] place-self-center lg:w-[70%] ">
+        <h1 class="font-raleway text-3xl font-semibold text-center lg:text-start lg:text-5xl ">Le skate, c'est pour la vie : roule à fond, quel que soit ton âge !</h1>
+          <a class="place-self-center" href="./produits.html">
+            <button  class="  bg-grey px-8 py-4 text-2xl font-bebas drop-shadow-2xl uppercase border-black border hover:drop-shadow-none hover:border-yellow " >
+              trouve ton skate
+            </button>
+          </a>
+      </div>
+      </section>
+      <section class="w-full grid gap-y-12 place-items-center pt-12 lg:pt-0 pb-20 ">
+        <ul class=" grid justify-center gap-y-5 lg:grid-cols-3 place-items-center w-full ">
+          <li class="flex flex-col justify-between items-center gap-6 max-w-[19rem] px-4 py-8 h-full">
+            <figure >
+              <img src="./assests/img/avantage/bouclier.svg" alt="">
+            </figure>
+            <p class="font-raleway font-bold text-center ">Des skateboards robustes conçus pour durer, fabriqués avec des matériaux de haute qualité</p>
+            <a href="#">
+              <button class="bg-withe px-8 py-2 text-2xl font-bebas uppercase border-black border ">
+                en savoir plus
+              </button>
+            </a>
+          </li>
+          <li class="flex flex-col justify-between items-center gap-6  max-w-[19rem] px-4 py-8  h-full ">
+            <figure>
+              <img src="./assests/img/avantage/group_people.svg" alt="">
+            </figure>
+            <p class="font-raleway font-bold text-center ">Des skateboards pour tous, adaptés à tes capacités, ton style et ton âge, pour les débutants comme pour les experts.</p>
+            <a href="#">
+              <button class="bg-withe px-8 py-2 text-2xl font-bebas uppercase border-black border ">
+                en savoir plus
+              </button>
+            </a>
+          </li>          
+          <li class="flex flex-col justify-between items-center gap-6  max-w-[19rem] px-4 py-8  h-full">
+            <figure>
+              <img src="./assests/img/avantage/support.svg" alt="">
+            </figure>
+            <p class="font-raleway font-bold text-center ">Un service client dédié pour t’aider à trouver le skate parfait et répondre à toutes tes questions.</p>
+            <a href="#">
+              <button class="bg-withe px-8 py-2 text-2xl font-bebas uppercase border-black border ">
+                en savoir plus
+              </button>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="vedette-container grid lg:grid-cols-4 w-full place-items-center">
+        <h3>nos produits vedette</h3>
+      </section>
+    </main>
+    <script type="module" src="./assests/js/main.js" defer></script>
+  </body>
+</html>
