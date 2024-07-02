@@ -3,15 +3,15 @@ import Product from "./Product.js";
 const products = [
   new Product(
     "Antihero Classic Eagle",
-    "/assests/img/products/product01.svg",
+    "../assests/img/products/product01.svg",
     "ANTIHERO",
-    "Ce skateboard complet est parfait pour les patineurs de tous niveaux. Pré-assemblé et prêt à rouler, fini avec du ruban adhésif noir, des roues de marque blanche et des trucks en aluminium",
-
+    `Ce skateboard complet est parfait pour les patineurs de tous niveaux. Pré-assemblé et prêt à rouler,fini avec du ruban adhésif noir, 
+    des roues de marque blanche et des trucks en aluminium`,
     129.95
   ),
   new Product(
     "Antihero Doggy",
-    "/assests/img/products/product02.svg",
+    "../assests/img/products/product02.svg",
     "ANTIHERO",
     "Ce skateboard complet est parfait pour les patineurs de tous niveaux. Pré-assemblé et prêt à rouler, fini avec du ruban adhésif noir, des roues de marque blanche et des trucks en aluminium.",
     129.95
@@ -35,7 +35,7 @@ const products = [
     "/assests/img/products/product05.svg",
     "LANDYACHTZ",
     "Une plateforme confortable et inspirante pour développer vos compétences en skate de rue et apprendre de nouveaux tricks. Si vous êtes fan de kicktails, cette planche en possède deux et ils ont tous les deux beaucoup de pop. La forme symétrique apporte toute la joie des shuvits, fakie, etc. Une forme simple, éprouvée et vraie pour répondre à tous vos besoins en street skate, avec la capacité de conquérir tous les types de terrain. Ce chiot vous permet de rouler en douceur et de surfer à travers ces carves ; elle vole",
-   199.95
+    199.95
   ),
   new Product(
     "Landyachtz Remorqueur - Space Tiger",
@@ -56,7 +56,7 @@ const products = [
     "/assests/img/products/product08.svg",
     "LANDYACHTZ",
     "Pilier de la gamme Landyachtz DH depuis plus d'une décennie, l'Evo a été sous les pieds de 3 champions du monde ainsi que d'innombrables vainqueurs de courses et prétendants au podium. L'Evo 40 offre une conduite dérivante et stable qui remplira n'importe quelle journée dans les collines de courses rapides et décontractées.",
-   299.95
+    299.95
   ),
   new Product(
     "Landyachtz Drop Hammer",

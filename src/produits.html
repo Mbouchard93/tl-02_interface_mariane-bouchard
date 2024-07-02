@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body
-    class="bg-[url('./assests/img/bg_gris.svg')] bg-center bg-cover bg-fixed grid grid-cols-4 gap-x-4 lg:grid-cols-12 lg:gap-x-5"
-  >
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>skateboards</title>
+</head>
+<body
+  class="bg-[url('/assests/img/bg_gris.svg')] bg-center bg-cover bg-fixed grid grid-cols-4 gap-x-4 lg:grid-cols-12 lg:gap-x-5">
   <header class="col-span-4 lg:col-span-12">
     <aside class="dialog z-10" id="menu-mobile">
       <nav class="w-[350px] bg-grey justify-self-end relative overlay">
-        <img
-        class="btn--close cursor-pointer top-4 right-4 absolute "
-        src="./assests/img/icone/close.svg"
-        alt=""/>
-        <ul class="grid gap-4 p-8 font-bebas text-2xl ">
-          <li ><a class="hover:underline" href="./index.html">Acceuil</a></li>
-          <li ><a class="hover:underline" href="./produits.html">Produits</a></li>
-          <li ><a class="hover:underline" href="./contact.html">Contact</a></li>
-          <li ><a class="hover:underline" href="./propos.html">à propos</a></li>
+        <img class="btn--close cursor-pointer top-4 right-4 absolute " src="./assests/img/icone/close.svg" alt="" />
+        <ul class="grid gap-4 p-8 font-bebas text-2xl h-fit">
+          <li><a class="hover:underline" href="./index.html">Acceuil</a></li>
+          <li><a class="hover:underline" href="./produits.html">Produits</a></li>
+          <li><a class="hover:underline" href="./contact.html">Contact</a></li>
+          <li><a class="hover:underline" href="./propos.html">à propos</a></li>
         </ul>
       </nav>
     </aside>
@@ -38,16 +35,10 @@
           <img src="./assests/img/icone/user.svg" alt="" />
         </button>
         <button>
-          <img
-            data-dialog="#cart"
-            src="./assests/img/icone/cart.svg"
-            alt=""/>
+          <img data-dialog="#cart" src="./assests/img/icone/cart.svg" alt="" />
         </button>
         <button class="lg:hidden" aria-label="Ouvrir le menu">
-          <img
-            data-dialog="#menu-mobile"
-            src="./assests/img/icone/menu.svg"
-            alt="icone de menu-mobile"/>
+          <img data-dialog="#menu-mobile" src="./assests/img/icone/menu.svg" alt="icone de menu-mobile" />
         </button>
       </div>
       <aside id="cart" class="dialog z-10">
@@ -60,17 +51,18 @@
     </nav>
   </header>
   <main class="col-span-4 grid lg:col-span-10 lg:col-start-2 lg:col-end-12 gap-10">
-      <section class="grid gap-10">
-        <h3 class="text-2xl lg:text-3xl font-raleway font-bold text-center">Nos skate complet</h3>
-        <label class=" place-self-center lg:place-self-end text-xl">
-          Recherche un article :
+    <section class="grid gap-10">
+      <h3 class="text-2xl lg:text-3xl font-raleway font-bold text-center">Nos skate complet</h3>
+      <label class=" place-self-center lg:place-self-end text-xl">
+        Recherche un article :
         <input class="p-2 rounded-md" type="text" placeholder="rechercher">
       </label>
-      </section>
-      <section class="product-container grid lg:grid-cols-3 w-full place-items-center bg-black bg-opacity-50 ">
+    </section>
+    <section class="product-container grid lg:grid-cols-3 w-full place-items-center bg-black bg-opacity-50 ">
 
-      </section>
-    </main>
-    <script type="module" src="./assests/js/main.js" defer></script>
-  </body>
+    </section>
+  </main>
+  <script type="module" src="./assests/js/main.js" defer></script>
+</body>
+
 </html>
