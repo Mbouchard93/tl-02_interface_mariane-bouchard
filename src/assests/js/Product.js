@@ -61,21 +61,26 @@ export default class Product {
     overlay.className = 'overflow-auto absolute h-[80vh] w-[75vw] lg:w-[40vw] lg:left-1/4 place-self-center flex-col justify-center gap-5 px-20 items-center rounded-md bg-withe overlay';
 
     const btnClose = document.createElement('img');
-    btnClose.src = './assests/img/icone/close.svg';
+    btnClose.src = '/assests/img/icone/close.svg';
     btnClose.className = 'btn--close cursor-pointer top-4 right-4 absolute';
 
     const details = document.createElement('details');
-    details.className ='cursor-pointer'
+    details.className = 'cursor-pointer';
+    
+ 
     const summary = document.createElement('summary');
     summary.textContent = 'Description';
-    summary.className = 'text-xl ';
-    details.appendChild(summary);
-    details.textContent = this.longdesct;
+    summary.className = 'text-xl';
+    details.appendChild(summary); 
+    const textDesct = document.createElement('p');
+    textDesct.textContent = this.longdesct
+    details.appendChild(textDesct)
+   
 
     const btnCardOVerlay = document.createElement('button');
     btnCardOVerlay.setAttribute('data-index', index);
     btnCardOVerlay.setAttribute('data-dialog', '#cart');
-    btnCardOVerlay.className = 'bg-yellow px-8 py-2 text-lg font-bebas uppercase border-black border cursor-pointer';
+    btnCardOVerlay.className = 'bg-yellow px-8 py-2 text-lg font-bebas uppercase border-black border cursor-pointer btn--close';
     btnCardOVerlay.textContent = 'Ajouter';
   
     overlay.appendChild(btnClose);
