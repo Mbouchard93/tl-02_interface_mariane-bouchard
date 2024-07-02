@@ -61,7 +61,7 @@ const products = [
   new Product(
     "Landyachtz Drop Hammer",
     "./assests/img/products/product09.svg",
-    "Le bagage à main sans sacrifices, suffisamment robuste pour faire face à toutes les situations de voyage.",
+    "LANDYACHTZ",
     "Léger, rigide et hautement sculptable. Le Drop Hammer est idéal pour tous ceux qui cherchent à pimenter leurs déplacements, à dévaler une colline douce, à se défouler sur le chemin des cours ou simplement à sortir pour une balade l'après-midi avec des amis. Monté sur chute, symétrique et rempli de merveilles ! ",
     259.95
   ),
@@ -90,7 +90,7 @@ const products = [
     "Awesome Hyper Normalization",
     "./assests/img/products/vedette04.svg",
     " Skatebard Deck 8.5",
-    "je suis une longue descriptionJason Dill, le fondateur de Fucking Awesome, a d'emblée fait de sa marque une exception dans le monde du streetwear, alliant son passé de skateur à une esthétique apolitiquement correcte. - Bois d'érable nord-américain à 7 plis",
+    "Jason Dill, le fondateur de Fucking Awesome, a d'emblée fait de sa marque une exception dans le monde du streetwear, alliant son passé de skateur à une esthétique apolitiquement correcte. - Bois d'érable nord-américain à 7 plis",
     120
   ),
 ];

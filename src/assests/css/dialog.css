@@ -14,7 +14,7 @@ body:has(.dialog[open]) {
   
   .dialog[open] .overlay {
     animation: slideIn .6s ease forwards;
-    display: block;
+    display: flex;
   }
 
   .dialog[closing] .overlay  {
