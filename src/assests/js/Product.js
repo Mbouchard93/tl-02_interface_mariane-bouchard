@@ -11,8 +11,8 @@ export default class Product {
 
   toProductHtml(index) {
     const containerCard = document.createElement('div');
-    containerCard.className = 'flex flex-col justify-around items-center gap-6 px-4 py-8 max-w-[18.75rem] font-sans font-medium w-full h-full';
-
+    containerCard.className = 'flex flex-col justify-around items-center gap-6 px-4 py-8 max-w-[18.75rem] font-sans font-medium w-full h-full cards';
+    containerCard.setAttribute('data-search', this.name);
     const name = document.createElement('h2');
     name.className = 'font-raleway text-lg text-center font-semibold';
     name.textContent = this.name;
@@ -58,7 +58,7 @@ export default class Product {
     containeroverlay.id = `dialogs${index}`;
 
     const overlay = document.createElement('div');
-    overlay.className = 'overflow-auto absolute h-[80vh] w-[75vw] lg:w-[40vw] lg:left-1/4 place-self-center flex-col justify-center gap-5 px-20 items-center rounded-md bg-withe overlay';
+    overlay.className = 'overflow-auto absolute h-[85vh] w-[75vw] lg:w-[40vw] lg:left-1/4 place-self-center flex-col justify-center gap-5 p-10 items-center rounded-md bg-withe overlay';
 
     const btnClose = document.createElement('img');
     btnClose.src = '/assests/img/icone/close.svg';

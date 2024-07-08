@@ -4,6 +4,8 @@ import "./dialog.js";
 import Lineitems from "./Lineitems.js";
 import Product from "./Product.js";
 import Cart from "./Cart.js";
+import  "./contact.js";
+import "./search.js"
 
 
 const productVedetteContainer = document.querySelector(".vedette-container");

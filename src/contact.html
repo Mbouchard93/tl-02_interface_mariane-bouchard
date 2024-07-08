@@ -21,7 +21,7 @@
         </ul>
       </nav>
     </aside>
-    <nav class="flex justify-between items-center p-6">
+    <nav class="flex justify-between items-center p-10">
       <a href="./index.html">
         <img src="./assests/img/logo-banner/logo.svg" alt="logo skate" />
       </a>
@@ -51,8 +51,50 @@
       </aside>
     </nav>
   </header>
-  <main class="col-span-4 grid lg:col-span-10 lg:col-start-2 lg:col-end-12"></main>
+  <main class="col-span-4 grid lg:col-span-10 lg:col-start-2 lg:col-end-12">
+      <section class="grid lg:grid-cols-2 lg:max-h-[750px] ">
+          <img class="w-auto h-[600px] place-self-center" src="./assests/img/contact.jpg" alt="">
+        <div class="px-6 flex flex-col gap-6">
+          <h3 class="text-2xl lg:text-4xl font-raleway font-semibold ">Discute avec nos experts pour trouver ta planche idéal.</h3>
+          <p>Chez nous, les planches sont conçus pour s'adapter à ton style. Si tu souhaites apporter des modifications à ton skate, écris-nous et nous le personnaliserons selon tes besoins.</p>
+          <form class="grid template-areas-form gap-2 font-bebas"   method="get"  novalidate>
+            <label for="name" class="area-nom" >Nom: </label>
+            <input type="text" class="area-name h-10 rounded-md"  id="name">
+            <label for="lastname" class="area-prenom">Prénom</label>
+            <input type="text" class="area-lastname rounded-md"  id="lastname">
+            <label for="email" class="area-adresse" name="email">Adresse courriel</label>
+            <input type="email" class="area-email rounded-md h-10" id="email" required >
+            <p class="area-error text-red  "></p>
+            <label for="subject" class="area-title">Tu veux nous parler de quoi</label>
+            <input type="text" class="area-subject rounded-md h-10" id="subject">
+            <label for="msg">Écris nous ton message</label>
+            <textarea name="" class="area-msg rounded-md h-20 resize-none" id="msg"></textarea>
+            <button class="area-btn rounded-md" data-dialog="#form">Envoyer</button>
+          </form>
+        </div>
+        <div class="dialog" id="form">
+          <div class="overlay  bg-withe h-[85vh] w-[75vw] lg:w-[40vw] lg:left-1/4 place-self-center ">
+
+          </div>
+
+        </div>
+      </section>
+  </main>
+  <footer class="col-span-4 lg:col-span-12 p-10">
+    <nav>
+      <img src="./assests/img/logo-banner/logo.svg" alt="">
+      <ul>
+        <li><a href="./index.html">Acceuil</a></li>
+        <li><a href="./produits.html">Produits</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./propos.html">À propos</a></li>
+      </ul>
+    </nav>
+    
+
+</footer>
   <script type="module" src="./assests/js/main.js" defer></script>
+
 </body>
 
 </html>
