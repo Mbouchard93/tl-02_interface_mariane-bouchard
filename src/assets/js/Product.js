@@ -1,5 +1,5 @@
 import products from "./products";
-
+import btnimg from '../img/icone/close.svg';
 export default class Product {
   constructor(name, img, shortdesct, longdesct, price) {
     this.name = name;
@@ -61,7 +61,7 @@ export default class Product {
     overlay.className = 'overflow-auto absolute h-[85vh] w-[75vw] lg:w-[40vw] lg:left-1/4 place-self-center flex-col justify-center gap-5 p-10 items-center rounded-md bg-withe overlay';
 
     const btnClose = document.createElement('img');
-    btnClose.src = '/assests/img/icone/close.svg';
+    btnClose.src = btnimg;
     btnClose.className = 'btn--close cursor-pointer top-4 right-4 absolute';
 
     const details = document.createElement('details');
@@ -101,39 +101,3 @@ export default class Product {
 }
 
 
-/*
-  toCardHtml(index) {
-    return `
-    <div class="flex flex-col justify-around items-center  gap-6 px-4 py-8 max-w-[18.75rem] font-sans font-medium  w-full h-full ">
-      <h2 class="font-raleway text-lg text-center font-semibold">${this.name}</h2>
-      <img class="max-h-[25rem]" src="${this.img}" alt="${this.name}" class="product-img">
-      <p>${this.shortdesct}</p>
-      <p>${this.price}</p>
-      <div class="flex">
-      <button class=" bg-yellow px-8 py-2 text-lg font-bebas uppercase border-black border cursor-pointer" data-index="${index}" data-dialog="#cart">Ajouter</button>
-      <button class=" bg-yellow px-8 py-2 text-lg font-bebas uppercase border-black border cursor-pointer" data-index="${index}" data-dialog="#dialogs${index}">Découvrir</button>
-      </div>
-      </div>
-      `;
-
-
-    return `
-        <div id="dialogs${index}" class="dialog ">
-          <div class=" overflow-auto absolute h-[80vh] w-[75vw] lg:w-[40vw] lg:left-1/4 place-self-center flex-col justify-center gap-5 px-20 items-center rounded-md bg-withe overlay ">
-          <img class="btn--close cursor-pointer top-4 right-4 absolute "
-          src="./assests/img/icone/close.svg" alt=""/>
-            <h2 class="font-raleway text-lg text-center font-semibold">${this.name}</h2>
-            <img class="max-h-[25rem]" src="${this.img}" alt="${this.name}" class="product-img">
-            <p>${this.shortdesct}</p>
-            <p>${this.price}</p>
-            <details >
-            <summary class="text-xl cursor-pointer ">Description</summary>
-            ${this.longdesct}
-            </details>
-             <button class=" bg-yellow btn--close px-8 py-2 text-lg font-bebas uppercase border-black border cursor-pointer" data-index="${index}" data-dialog="#cart">Ajouter</button>
-          </div>
-        </div>
-      `;
-
-
-  } /** */

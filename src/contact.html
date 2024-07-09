@@ -8,11 +8,11 @@
   <title>skateboards</title>
 </head>
 <body
-  class="bg-[url('/assests/img/bg_gris.svg')] bg-center bg-cover bg-fixed grid grid-cols-4 gap-x-4 lg:grid-cols-12 lg:gap-x-5">
+  class="bg-[url('/assets/img/bg_gris.svg')] bg-center bg-cover bg-fixed grid grid-cols-4 gap-x-4 lg:grid-cols-12 lg:gap-x-5">
   <header class="col-span-4 lg:col-span-12">
     <aside class="dialog z-10" id="menu-mobile">
       <nav class="w-[350px] bg-grey justify-self-end relative overlay">
-        <img class="btn--close cursor-pointer top-4 right-4 absolute" src="./assests/img/icone/close.svg" alt="" />
+        <img class="btn--close cursor-pointer top-4 right-4 absolute" src="./assets/img/icone/close.svg" alt="" />
         <ul class="grid gap-4 p-8 font-bebas text-2xl h-fit">
           <li><a class="hover:underline" href="./index.html">Acceuil</a></li>
           <li><a class="hover:underline" href="./produits.html">Produits</a></li>
@@ -23,7 +23,7 @@
     </aside>
     <nav class="flex justify-between items-center p-10">
       <a href="./index.html">
-        <img src="./assests/img/logo-banner/logo.svg" alt="logo skate" />
+        <img src="./assets/img/logo-banner/logo.svg" alt="logo skate" />
       </a>
       <ul class="hidden lg:flex gap-20 w-[60%] uppercase font-bebas text-2xl">
         <li><a href="./index.html">Acceuil</a></li>
@@ -33,13 +33,13 @@
       </ul>
       <div class="flex gap-5">
         <button class="hidden lg:block">
-          <img src="./assests/img/icone/user.svg" alt="" />
+          <img src="./assets/img/icone/user.svg" alt="" />
         </button>
         <button>
-          <img data-dialog="#cart" src="./assests/img/icone/cart.svg" alt="" />
+          <img data-dialog="#cart" src="./assets/img/icone/cart.svg" alt="" />
         </button>
         <button class="lg:hidden" aria-label="Ouvrir le menu">
-          <img data-dialog="#menu-mobile" src="./assests/img/icone/menu.svg" alt="icone de menu-mobile" />
+          <img data-dialog="#menu-mobile" src="./assets/img/icone/menu.svg" alt="icone de menu-mobile" />
         </button>
       </div>
       <aside id="cart" class="dialog z-10">
@@ -53,36 +53,37 @@
   </header>
   <main class="col-span-4 grid lg:col-span-10 lg:col-start-2 lg:col-end-12">
       <section class="grid lg:grid-cols-2 lg:max-h-[750px] ">
-          <img class="w-auto h-[600px] place-self-center" src="./assests/img/contact.jpg" alt="">
+          <img class="w-auto h-[600px] place-self-center" src="./assets/img/contact.jpg" alt="">
         <div class="px-6 flex flex-col gap-6">
           <h3 class="text-2xl lg:text-4xl font-raleway font-semibold ">Discute avec nos experts pour trouver ta planche idéal.</h3>
           <p>Chez nous, les planches sont conçus pour s'adapter à ton style. Si tu souhaites apporter des modifications à ton skate, écris-nous et nous le personnaliserons selon tes besoins.</p>
-          <form class="grid template-areas-form gap-2 font-bebas"   method="get"  novalidate>
-            <label for="name" class="area-nom" >Nom: </label>
-            <input type="text" class="area-name h-10 rounded-md"  id="name">
+          <form class="grid template-areas-form gap-2 font-raleway font-semibold   "   method="get"  novalidate>
+            <label for="name" class="area-nom " >Nom: </label>
+            <input type="text" class="area-name h-10 rounded-md px-4 drop-shadow-md  "  id="name">
             <label for="lastname" class="area-prenom">Prénom</label>
-            <input type="text" class="area-lastname rounded-md"  id="lastname">
+            <input type="text" class="area-lastname rounded-md px-4 drop-shadow-md "  id="lastname">
             <label for="email" class="area-adresse" name="email">Adresse courriel</label>
-            <input type="email" class="area-email rounded-md h-10" id="email" required >
-            <p class="area-error text-red  "></p>
+            <input type="email" class="area-email rounded-md h-10 px-4 drop-shadow-md email " id="email" required >
+            <p class="area-error error text-red  "></p>
             <label for="subject" class="area-title">Tu veux nous parler de quoi</label>
-            <input type="text" class="area-subject rounded-md h-10" id="subject">
+            <input type="text" class="area-subject rounded-md h-10 px-4 drop-shadow-md " id="subject">
             <label for="msg">Écris nous ton message</label>
-            <textarea name="" class="area-msg rounded-md h-20 resize-none" id="msg"></textarea>
-            <button class="area-btn rounded-md" data-dialog="#form">Envoyer</button>
+            <textarea name="" class="area-msg rounded-md h-20 resize-none px-4 drop-shadow-md " id="msg"></textarea>
+            <button class="area-btn rounded-md" data-dialog="#formContact">Envoyer</button>
+            <div class="dialog" id="formContact">
+              <div class="overlay  bg-withe h-[85vh] w-[75vw] lg:w-[40vw] lg:left-1/4 place-self-center ">
+    
+              </div>
+    
+            </div>
           </form>
         </div>
-        <div class="dialog" id="form">
-          <div class="overlay  bg-withe h-[85vh] w-[75vw] lg:w-[40vw] lg:left-1/4 place-self-center ">
 
-          </div>
-
-        </div>
       </section>
   </main>
   <footer class="col-span-4 lg:col-span-12 p-10">
     <nav>
-      <img src="./assests/img/logo-banner/logo.svg" alt="">
+      <img src="./assets/img/logo-banner/logo.svg" alt="">
       <ul>
         <li><a href="./index.html">Acceuil</a></li>
         <li><a href="./produits.html">Produits</a></li>
@@ -93,7 +94,7 @@
     
 
 </footer>
-  <script type="module" src="./assests/js/main.js" defer></script>
+  <script type="module" src="./assets/js/main.js" defer></script>
 
 </body>
 

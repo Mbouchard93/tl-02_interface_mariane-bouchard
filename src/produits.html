@@ -7,11 +7,11 @@
   <title>skateboards</title>
 </head>
 <body
-  class="bg-[url('/assests/img/bg_gris.svg')] bg-center bg-cover bg-fixed grid grid-cols-4 gap-x-4 lg:grid-cols-12 lg:gap-x-5">
+  class="bg-[url('/assets/img/bg_gris.svg')] bg-center bg-cover bg-fixed grid grid-cols-4 gap-x-4 lg:grid-cols-12 lg:gap-x-5">
   <header class="col-span-4 lg:col-span-12">
     <aside class="dialog z-10" id="menu-mobile">
       <nav class="w-[350px] bg-grey justify-self-end relative overlay">
-        <img class="btn--close cursor-pointer top-4 right-4 absolute " src="./assests/img/icone/close.svg" alt="" />
+        <img class="btn--close cursor-pointer top-4 right-4 absolute " src="./assets/img/icone/close.svg" alt="" />
         <ul class="grid gap-4 p-8 font-bebas text-2xl h-fit">
           <li><a class="hover:underline" href="./index.html">Acceuil</a></li>
           <li><a class="hover:underline" href="./produits.html">Produits</a></li>
@@ -22,7 +22,7 @@
     </aside>
     <nav class="flex justify-between items-center p-6">
       <a href="./index.html">
-        <img src="./assests/img/logo-banner/logo.svg" alt="logo skate" />
+        <img src="./assets/img/logo-banner/logo.svg" alt="logo skate" />
       </a>
       <ul class="hidden lg:flex gap-20 w-[60%] uppercase font-bebas text-2xl">
         <li><a href="./index.html">Acceuil</a></li>
@@ -32,13 +32,13 @@
       </ul>
       <div class="flex gap-5">
         <button class="hidden lg:block">
-          <img src="./assests/img/icone/user.svg" alt="" />
+          <img src="./assets/img/icone/user.svg" alt="" />
         </button>
         <button>
-          <img data-dialog="#cart" src="./assests/img/icone/cart.svg" alt="" />
+          <img data-dialog="#cart" src="./assets/img/icone/cart.svg" alt="" />
         </button>
         <button class="lg:hidden" aria-label="Ouvrir le menu">
-          <img data-dialog="#menu-mobile" src="./assests/img/icone/menu.svg" alt="icone de menu-mobile" />
+          <img data-dialog="#menu-mobile" src="./assets/img/icone/menu.svg" alt="icone de menu-mobile" />
         </button>
       </div>
       <aside id="cart" class="dialog z-10">
@@ -58,24 +58,41 @@
         <input class="p-2 rounded-md" type="text" id="search" placeholder="rechercher">
       </label>
     </section>
-    <section class="product-container grid lg:grid-cols-3 w-full place-items-center bg-black bg-opacity-50 ">
+    <section class="product-container grid md:grid-cols-2 lg:grid-cols-3 w-full place-items-center bg-black bg-opacity-50 ">
 
     </section>
   </main>
-  <footer class="col-span-4 lg:col-span-12 p-10">
+  <footer class="col-span-4 lg:col-span-12 grid lg:grid-cols-3 p-10 ">
+    <div class="flex flex-col justify-around " >
+      <img class="h-10 place-self-start" src="./assets/img/logo-banner/logo.svg" alt="">
+      <div>
+      <h4>Contact-nous</h4>
+      <a href="mailto:info@skate.com">info@skate.com</a>
+      <a href="tel:=+514-249-2378">514-249-2378</a>
+    </div>
+    </div>
     <nav>
-      <img src="./assests/img/logo-banner/logo.svg" alt="">
-      <ul>
+      <h4>Menu</h4>
+      <ul class="grid">
         <li><a href="./index.html">Acceuil</a></li>
         <li><a href="./produits.html">Produits</a></li>
         <li><a href="./contact.html">Contact</a></li>
         <li><a href="./propos.html">À propos</a></li>
       </ul>
     </nav>
-    
+    <form class="grid h-fit gap-y-2 place-self-center w-2/3" novalidate>
+      <label for="email" class="text-xl">Incris toi à notre infolettre</label>
+      <input type="email" id="email" class="h-10 px-4 rounded-md email" name="email" placeholder="Adresse courriel" required>
+      <p class="error text-red "></p>
+      <button class="bg-yellow rounded-md py-2 " data-dialog="#formProduct">Envoyer</button>
+      <div class="dialog " id="formProduct">
+        <div class="overlay bg-withe h-[50vh] w-[75vw] lg:w-[40vw] lg:left-1/4 place-self-center   ">
 
+        </div>
+      </div>
+    </form>
 </footer>
-  <script type="module" src="./assests/js/main.js" defer></script>
+  <script type="module" src="./assets/js/main.js" defer></script>
 </body>
 
 </html>

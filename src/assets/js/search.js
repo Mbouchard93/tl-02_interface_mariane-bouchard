@@ -3,7 +3,6 @@ window.addEventListener('load', ()=> {
     const input = document.querySelector('#search');
     const cards = document.querySelectorAll('.cards')
     
-    console.log(input);
 
     input.addEventListener("input", () => {
         const searchValue = input.value.toLowerCase();
