@@ -8,6 +8,8 @@ export default class Cart {
          * @type {Lineitems[]}
          */
         this.lineItems = [];
-
     }
+
+
 }
+

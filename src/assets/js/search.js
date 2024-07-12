@@ -1,18 +1,20 @@
+const input = document.querySelector('#search');
+const cards = document.querySelectorAll('.cards');
+const containerNbArticle = document.querySelector('.nb-article');
 
-window.addEventListener('load', ()=> {
-    const input = document.querySelector('#search');
-    const cards = document.querySelectorAll('.cards')
+input.addEventListener("input", () => {
+    const searchValue = input.value.toLowerCase();
+    let visibleCount =  0 
     
-
-    input.addEventListener("input", () => {
-        const searchValue = input.value.toLowerCase();
-        cards.forEach((card) => {
-          const searchData = card.getAttribute("data-search").toLocaleLowerCase();
-          if (searchData.includes(searchValue)) {
+    cards.forEach((card) => {
+        const searchData = card.getAttribute("data-search").toLowerCase();
+        if (searchData.includes(searchValue)) {
             card.classList.remove("hidden");
-          } else {
+            visibleCount++; 
+        } else {
             card.classList.add("hidden");
-          }
-        });
-      });
-})
+        }
+    });
+    
+    containerNbArticle.textContent = "Nombre d'article : " + visibleCount; 
+});

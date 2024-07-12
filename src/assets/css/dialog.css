@@ -6,6 +6,7 @@ body:has(.dialog[open]) {
 .dialog[open]  {
     animation: opIn 0.3s ease forwards;
     display: grid;
+    z-index: 10;
   }
 
   .dialog[closing]  {

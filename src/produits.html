@@ -42,37 +42,29 @@
         </button>
       </div>
       <aside id="cart" class="dialog z-10">
-        <div class="w-[350px] bg-withe justify-self-end overlay">
+        <div class="w-[350px] bg-withe justify-self-end overlay flex-col overflow-auto">
           <h3>Panier</h3>
           <main class="cart__items"></main>
-          <footer class="cart__total">$0.00</footer>
+          <footer class="cart__total"></footer>
         </div>
       </aside>
     </nav>
   </header>
-  <main class="col-span-4 grid lg:col-span-10 lg:col-start-2 lg:col-end-12 gap-10">
+  <main class="col-span-4 grid lg:col-span-10 lg:col-start-2 lg:col-end-12 gap-10 pt-5 pb-10">
     <section class="grid gap-10">
       <h3 class="text-2xl lg:text-3xl font-raleway font-bold text-center">Nos skate complet</h3>
-      <label class=" place-self-center lg:place-self-end text-xl">
-        Recherche un article :
-        <input class="p-2 rounded-md" type="text" id="search" placeholder="rechercher">
-      </label>
+      <div class=" grid place-self-center lg:place-self-end text-xl gap-2">
+       <input class="p-2 rounded-md" type="text" id="search" placeholder="rechercher">
+        <p class="nb-article" >Nombre d'article : 9</p>
+      </div>
     </section>
-    <section class="product-container grid md:grid-cols-2 lg:grid-cols-3 w-full place-items-center bg-black bg-opacity-50 ">
-
+    <section class="product-container grid md:grid-cols-2 lg:grid-cols-3 w-full place-items-center bg-black bg-opacity-40  gap-10 ">
+    
     </section>
   </main>
-  <footer class="col-span-4 lg:col-span-12 grid lg:grid-cols-3 p-10 ">
-    <div class="flex flex-col justify-around " >
+  <footer class="col-span-4 lg:col-span-12 flex flex-col md:grid md:grid-cols-3 p-10 bg-grey gap-6 font-raleway font-medium ">
+    <nav >
       <img class="h-10 place-self-start" src="./assets/img/logo-banner/logo.svg" alt="">
-      <div>
-      <h4>Contact-nous</h4>
-      <a href="mailto:info@skate.com">info@skate.com</a>
-      <a href="tel:=+514-249-2378">514-249-2378</a>
-    </div>
-    </div>
-    <nav>
-      <h4>Menu</h4>
       <ul class="grid">
         <li><a href="./index.html">Acceuil</a></li>
         <li><a href="./produits.html">Produits</a></li>
@@ -80,19 +72,39 @@
         <li><a href="./propos.html">À propos</a></li>
       </ul>
     </nav>
-    <form class="grid h-fit gap-y-2 place-self-center w-2/3" novalidate>
+    <form class="grid h-fit gap-y-2 lg:place-self-center w-fit lg:w-2/3" novalidate>
       <label for="email" class="text-xl">Incris toi à notre infolettre</label>
       <input type="email" id="email" class="h-10 px-4 rounded-md email" name="email" placeholder="Adresse courriel" required>
       <p class="error text-red "></p>
-      <button class="bg-yellow rounded-md py-2 " data-dialog="#formProduct">Envoyer</button>
+      <button class="bg-yellow rounded-md py-2  " data-dialog="#formProduct">Envoyer</button>
       <div class="dialog " id="formProduct">
-        <div class="overlay bg-withe h-[50vh] w-[75vw] lg:w-[40vw] lg:left-1/4 place-self-center   ">
-
+        <div class="overlay  bg-withe h-fit w-[75vw] lg:w-[35vw] place-self-center flex-col items-center gap-4 p-10 rounded-sm ">
+          <img class="btn--close cursor-pointer top-4 right-4 absolute " src="./assets/img/icone/close.svg" alt="" />
+          <h4 class="self-start">Merci de vous être inscrit à notre infolettre !</h4>
+          <p>Nous sommes ravis de vous compter parmi nos abonnés. Vous recevrez prochainement des nouvelles, des offres exclusives et des informations sur nos derniers produits.</p>
+          <img src="./assets/img/mail.png" class="w-[250px] " alt="">
         </div>
       </div>
     </form>
+    <div class="justify-self-end flex flex-col justify-around">
+      <div class="flex flex-col justify-around" >
+        <h4>Contact-nous</h4>
+        <a href="mailto:info@skate.com">info@skate.com</a>
+        <a href="tel:=+514-249-2378">514-249-2378</a>
+      </div>
+    <ul class="flex gap-4  w-full lg:col-span-2">
+      <li><a href="https://www.facebook.com/"><img src="./assets/img/follow/Facebook.svg" alt=""></a></li>
+      <li><a href="https://www.instagram.com/"><img src="./assets/img/follow/Instagram.svg" alt=""></a></li>
+      <li><a href="https://www.youtube.com/"><img src="./assets/img/follow/YouTube.svg" alt=""></a></li>
+    </ul>
+  </div>
+  <div class="col-span-3">
+    <p>&copy; 2024 Mariane bouchard. Tous droits réservés. </p>
+
+  </div>
 </footer>
-  <script type="module" src="./assets/js/main.js" defer></script>
+  <script type="module" src="./assets/js/main.js" ></script>
+  <script type="module" src="./assets/js/search.js"></script>
 </body>
 
 </html>
