@@ -9,7 +9,9 @@ export default class Cart {
          */
         this.lineItems = [];
     }
-
+    calculTotal(){
+        
+    }
 
 }
 

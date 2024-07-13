@@ -8,10 +8,7 @@ import productimg6 from "../img/products/product06.svg"
 import productimg7 from "../img/products/product07.svg"
 import productimg8 from "../img/products/product08.svg"
 import productimg9 from "../img/products/product09.svg"
-import productimg10 from "../img/products/vedette01.svg"
-import productimg11 from "../img/products/vedette02.svg"
-import productimg12 from "../img/products/vedette03.svg"
-import productimg13 from "../img/products/vedette04.svg"
+
 
 const products = [
   new Product(
@@ -78,34 +75,7 @@ const products = [
     "Léger, rigide et hautement sculptable. Le Drop Hammer est idéal pour tous ceux qui cherchent à pimenter leurs déplacements, à dévaler une colline douce, à se défouler sur le chemin des cours ou simplement à sortir pour une balade l'après-midi avec des amis. Monté sur chute, symétrique et rempli de merveilles ! ",
     259.95
   ),
-  new Product(
-    "Landyachtz Wolfshark",
-    productimg10,
-    "LANDYACHTZ",
-    "un nouveau Wolfshark pour chatouiller votre nostalgie tout en offrant un design et des spécifications modernes dans le monde de la course de descente et du freeride. Le Wolfshark 2024 est un rappel du tout premier Wolfshark de 2011, à la fois avec la forme et le graphisme « HD » mis à jour. Nous voulions offrir un avant-goût de l'original tout en proposant un design actuel et des spécifications modernes.",
-    280
-  ),
-  new Product(
-    "Fucking Awesome Kitty Fetus",
-    productimg11,
-    " Skatebard Deck 8",
-    "Construit à partir d'érable traditionnel à 7 plis. Fabriqué par BBS. Le prix comprend la poignée",
-    120
-  ),
-  new Product(
-    "Sci-Fi Fantasy Endless Beauty",
-    productimg12,
-    "Skateboard deck 8.75",
-    "Construit à partir d'érable traditionnel à 7 plis. Fabriqué par BBS. Le prix comprend la poignée",
-    120
-  ),
-  new Product(
-    "Awesome Hyper Normalization",
-    productimg13,
-    " Skatebard Deck 8.5",
-    "Jason Dill, le fondateur de Fucking Awesome, a d'emblée fait de sa marque une exception dans le monde du streetwear, alliant son passé de skateur à une esthétique apolitiquement correcte. - Bois d'érable nord-américain à 7 plis",
-    120
-  ),
+
 ];
 
 export default products;

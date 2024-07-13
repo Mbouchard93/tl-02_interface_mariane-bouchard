@@ -8,6 +8,7 @@ import  "./contact.js";
 
 
 
+
 const productVedetteContainer = document.querySelector(".vedette-container");
 const productContainer = document.querySelector(".product-container");
 
@@ -29,23 +30,21 @@ if (productContainer) {
 
 
 const cart = new Cart();
+
+cart.lineItems.forEach((lineItem, index) => {
+  cartContainer.toLineItemsHtml(lineItem,index);
+});
+
 const btnAdd = document.querySelectorAll('.btn__Cart');
-
-for (let i = 0; i < cart.lineItems.length; i++) {
-  const lineItem = cart.lineItems[i];
-  const lineItems = lineItem.toLineItemsHtml(i);
-  cartContainer.appendChild(lineItems);
-}
-
 
 btnAdd.forEach(btn => {
   btn.addEventListener('click', () => { 
     const productIndex = parseInt(btn.getAttribute('data-product-index'));
+    console.log(productIndex)
     const product = products[productIndex];
 
     let lineItem = cart.lineItems.find(item => item.product === product);
-    
-
+  
     if(lineItem){
       lineItem.quantity++;
     }else {
@@ -54,7 +53,6 @@ btnAdd.forEach(btn => {
     }
     
     const cartContainer = document.querySelector('.cart__items');
-    
 
     const isLineItems = document.querySelector(`#carts${productIndex}`);
     if(isLineItems){
@@ -62,9 +60,7 @@ btnAdd.forEach(btn => {
     }else {
       cartContainer.appendChild(lineItem.toLineItemsHtml(productIndex)); 
     }
-
-  
-    
+   
   });
 })
 

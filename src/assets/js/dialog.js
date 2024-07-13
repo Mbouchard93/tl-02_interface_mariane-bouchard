@@ -1,4 +1,3 @@
-// la logique pour afficher l'overlay ne fonctionnais pas sans ceci. 
 window.addEventListener('load', () => {
     const containerDialog = document.querySelectorAll('[data-dialog]');
 

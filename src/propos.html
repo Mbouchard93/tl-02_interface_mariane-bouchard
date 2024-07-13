@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>skateboards</title>
 </head>
+
 <body
   class="bg-[url('/assets/img/bg_gris.svg')] bg-center bg-cover bg-fixed grid grid-cols-4 gap-x-4 lg:grid-cols-12 lg:gap-x-5">
   <header class="col-span-4 lg:col-span-12">
@@ -51,10 +52,123 @@
       </aside>
     </nav>
   </header>
-  <main class="col-span-4 grid lg:col-span-10 lg:col-start-2 lg:col-end-12 ">
+  <main class="col-span-4 grid lg:col-span-10 lg:col-start-2 lg:col-end-12 p-10 gap-y-20">
+    <h3 class="font-raleway font-bold uppercase text-[65px] col-span-10 ">à propos</h3>
+    <section
+      class="place-self-center grid gap-y-20 col-span-4 lg:grid-cols-12  lg:gap-x-5 lg:col-start-2 lg:col-end-11   ">
+      <div class=" bg-black p-10 bg-opacity-50 text-withe rounded-md lg:col-span-8 lg:row-start-1 flex flex-col gap-4 ">
+        <h4 class="text-2xl font-raleway font-semibold ">L'enseignant</h4>
+        <figure class="h-80 w-80 py-4">
+          <img class="w-full h-full" src="./assets/img/about/about1.png" alt="">
+        </figure>
+        <p>La première source pour la réalisation de ce site web est l'enseignant du cours d'interface mobile. Pendant
+          les cours,
+          nous avons monté la structure du travail en révisant certaines notions vues durant la session. Je n'avais pas
+          bien assimilé l'utilisation
+          des data-dialog pour l'ouverture des "overlay", mais quand il les a réexpliqués en classe, tout est devenu
+          plus clair et cela m'a donné de
+          bonnes bases pour commencer à coder.</p>
+        <p>J'ai remarqué que j'apprends mieux quand il augmente la difficulté, car cela me pousse à me surpasser et les
+          notions plus faciles
+          deviennent alors plus claires.</p>
+      </div>
+      <div class=" bg-black p-10 bg-opacity-50 text-withe rounded-md lg:col-span-8 lg:col-start-5 lg:row-start-2 flex flex-col gap-4">
+        <h3 class="text-2xl font-raleway font-semibold ">Tutorielle FromScratch</h3>
+        <figure class=" w-fit py-10">
+          <img class="h-full w-full" src="./assets/img/about/about2.jpg" alt="">
+        </figure>
+        <p>La deuxième source que j’ai utilisée est un cours sous forme de tutoriel vidéo intitulé FromScratch. J’y ai
+          appris plusieurs notions,
+          même si la technique enseignée diffère de celle apprise en classe. J’ai découvert la propriété innerHTML et
+          j’ai trouvé cette technique
+          beaucoup plus facile à comprendre. Cependant, mon enseignant m’a déconseillé cette technique car elle
+          n’approfondit pas la maîtrise des
+          méthodes. Néanmoins, l’exploration de innerHTML a été très intéressante et m’a permis de faire un premier jet
+          de code avant de le transposer
+          en textContent, ce qui a été une bonne pratique.</p>
+        <p>J’ai compris que innerHTML permet d’insérer du HTML et du texte à l’intérieur d’un élément, tandis
+          que textContent insère uniquement du texte brut, offrant une
+          alternative plus sécurisée.J’ai également appris les méthodes map, find et parseInt, ainsi que l’utilisation
+          de l’écouteur d’événements load.
+          Ce dernier ma été très utile lorsque le DOM n’est pas encore chargé et que j'essaie d’appeler une fonction ou
+          une méthode.</p>
+      </div>
+      <div class=" bg-black p-10 bg-opacity-50 text-withe rounded-md lg:col-span-8 lg:col-start-1 lg:row-start-3">
+        <h3 class="text-2xl font-raleway font-semibold ">MDN</h3>
+        <figure class=" w-fit">
+          <img class="h-full w-full" src="./assets/img/about/about3.png" alt="">
+        </figure>
+        <p>Ma troisième source a été MDN , qui m’a aidé à approfondir les méthodes que j’ai apprises dans les tutoriels.
+          Cela m’a permis de mieux comprendre le code que j’utilisais
+          au départ. J’ai lu sur les méthodes suivantes et voici ce que j’en ai compris :</p>
+        <ul class="flex flex-col gap-4 pt-4">
+          <li>
+            <h4 class="uppercase text-xl font-bold"> méthode find </h4>
+            <p>c'est comme un détective qui examine chaque élément d’un tableau un par un. Pour chaque élément, elle
+              utilise une fonction
+              (qu'on appelle une fonction de rappel ou callback) pour vérifier si cet élément est celui qu’elle
+              recherche.
+              Si la fonction de rappel l'indentifie elle renvoie true, alors find arrête sa recherche et renvoie cet
+              élément. Si la fonction de rappel
+              ne l’indentifie pas, elle renvoie false pour tout les éléments, alors find renvoie undefined, ce qui
+              signifie qu’elle n’a pas trouvé ce qu’elle cherchait.</p>
+            <p> Dans mon code, la fonction de rappel : item = > item.product === product, vérifie si le produit de
+              l’élément actuel (item.product)
+              est le même que le produit que je recherches (product). Si c’est le cas, la fonction de rappel
+              l’indentifie et find renvoie cet élément,
+              qui est ensuite stocké dans la variable lineItem.</p>
+          </li>
+          <li>
+            <h4 class="uppercase text-xl font-bold">Méthode parseInt</h4>
+            <p>
+              est utilisé car elle convertit une chaîne de caractères en un nombre entier. J’utilise le nombre retourner
+              pour pour identifier le produit du tableau qui doit être ajouté au panier lorsque
+              l’utilisateur clique sur le bouton portant la classe .btn__cart.
+            </p>
+          </li>
+          <li>
+            <h4 class="uppercase text-xl font-bold">Méthode map</h4>
+            <p>La méthode map crée un nouveau tableau avec les résultats de l’appel d’une fonction fournie sur chaque
+              élément du tableau d’origine. J’utilisais cette technique au début lorsque j’utilisais innerHTML, mais je
+              l’ai ensuite remplacée par forEach.</p>
+          </li>
+          <li>
+            <h4 class="uppercase text-xl font-bold">Méthode toFixed</h4>
+            <p> est souvent utilisée pour formater les nombres à virgule flottante en chaînes de caractères avec un
+              nombre spécifique de chiffres après la virgule.  Dans mon code je l’utilise pour arrondir le sous-totale
+              pour garder seulement 2 nombre après la virgule </p>
+          </li>
+        </ul>
+      </div>
+      <div class=" bg-black p-10 bg-opacity-50 text-withe rounded-md lg:col-span-8 lg:col-start-5 lg:row-start-4 flex flex-col gap-4">
+        <h3 class="text-2xl font-raleway font-semibold ">chatGpt </h3>
+        <figure class=" w-fit py-4">
+          <img class="h-full w-full" src="./assets/img/about/about4.png" alt="">
+        </figure>
+        <p>Ma quatrième source, chatGpt qui m’a servi de copilote tout au long de la programmation. Lorsque je
+          rencontrais des bogues ou simplement lorsque je me demandais pourquoi mon code ne fonctionnait pas, il
+          m’expliquait les erreurs que j’avais commises. </p>
+        <p>Je l’utilise aussi beaucoup pour demander certaines classes Tailwind pour réaliser des choses en CSS, ou pour
+          lui demander des noms ou des attributs de balises HTML que j’ai oubliés, comme mailto pour rediriger
+          l’utilisateur vers sa boîte mail, ou certains types d’input dont j’ai besoin sans nécessairement connaître
+          leur type.</p>
+      </div>
+      <div class=" bg-black p-10 bg-opacity-50 text-withe rounded-md lg:col-span-8 lg:col-start-1 lg:row-start-5">
+        <h3 class="text-2xl font-raleway font-semibold ">Console.log()</h3>
+        <figure class="  w-[250px] lg:w-[375px]">
+          <img class="h-full w-full" src="./assets/img/about/about5.png" alt="">
+        </figure>
+        <p>Une dernière méthode que j’utilise énormément pour comprendre mon code est le console.log(). Je l’utilise lorsque je ne comprends pas
+          exactement ce qu’une variable me renvoie ou pour comprendre plus en profondeur ce que je manipule. J’utilise
+          aussi beaucoup l’inspecteur pour voir la structure réelle de mon HTML, étant donné qu’il est injecté par
+          JavaScript. Souvent, j’ai compris des bogues parce qu’un certain élément HTML portait l’attribut que je
+          voulais insérer, ou je réalisais que je ne ciblais pas le bon élément.</p>
+      </div>
+    </section>
   </main>
-  <footer class="col-span-4 lg:col-span-12 flex flex-col md:grid md:grid-cols-3 p-10 bg-grey gap-6 font-raleway font-medium ">
-    <nav >
+  <footer
+    class="col-span-4 lg:col-span-12 flex flex-col md:grid md:grid-cols-3 p-10 bg-grey gap-6 font-raleway font-medium ">
+    <nav>
       <img class="h-10 place-self-start" src="./assets/img/logo-banner/logo.svg" alt="">
       <ul class="grid">
         <li><a href="./index.html">Acceuil</a></li>
@@ -65,35 +179,37 @@
     </nav>
     <form class="grid h-fit gap-y-2 lg:place-self-center w-fit lg:w-2/3" novalidate>
       <label for="email" class="text-xl">Incris toi à notre infolettre</label>
-      <input type="email" id="email" class="h-10 px-4 rounded-md email" name="email" placeholder="Adresse courriel" required>
+      <input type="email" id="email" class="h-10 px-4 rounded-md email" name="email" placeholder="Adresse courriel"
+        required>
       <p class="error text-red "></p>
       <button class="bg-yellow rounded-md py-2  " data-dialog="#formProduct">Envoyer</button>
       <div class="dialog " id="formProduct">
-        <div class="overlay  bg-withe h-fit w-[75vw] lg:w-[35vw] place-self-center flex-col items-center gap-4 p-10 rounded-sm ">
+        <div
+          class="overlay  bg-withe h-fit w-[75vw] lg:w-[35vw] place-self-center flex-col items-center gap-4 p-10 rounded-sm ">
           <img class="btn--close cursor-pointer top-4 right-4 absolute " src="./assets/img/icone/close.svg" alt="" />
           <h4 class="self-start">Merci de vous être inscrit à notre infolettre !</h4>
-          <p>Nous sommes ravis de vous compter parmi nos abonnés. Vous recevrez prochainement des nouvelles, des offres exclusives et des informations sur nos derniers produits.</p>
+          <p>Nous sommes ravis de vous compter parmi nos abonnés. Vous recevrez prochainement des nouvelles, des offres
+            exclusives et des informations sur nos derniers produits.</p>
           <img src="./assets/img/mail.png" class="w-[250px] " alt="">
         </div>
       </div>
     </form>
     <div class="justify-self-end flex flex-col justify-around ">
-      <div class="flex flex-col justify-around" >
+      <div class="flex flex-col justify-around">
         <h4>Contact-nous</h4>
         <a href="mailto:info@skate.com">info@skate.com</a>
         <a href="tel:=+514-249-2378">514-249-2378</a>
       </div>
-    <ul class="flex gap-4  w-full lg:col-span-2">
-      <li><a href="https://www.facebook.com/"><img src="./assets/img/follow/Facebook.svg" alt=""></a></li>
-      <li><a href="https://www.instagram.com/"><img src="./assets/img/follow/Instagram.svg" alt=""></a></li>
-      <li><a href="https://www.youtube.com/"><img src="./assets/img/follow/YouTube.svg" alt=""></a></li>
-    </ul>
-  </div>
-  <div class="col-span-3">
-    <p>&copy; 2024 Mariane bouchard. Tous droits réservés. </p>
-
-  </div>
-</footer>
+      <ul class="flex gap-4  w-full lg:col-span-2">
+        <li><a href="https://www.facebook.com/"><img src="./assets/img/follow/Facebook.svg" alt=""></a></li>
+        <li><a href="https://www.instagram.com/"><img src="./assets/img/follow/Instagram.svg" alt=""></a></li>
+        <li><a href="https://www.youtube.com/"><img src="./assets/img/follow/YouTube.svg" alt=""></a></li>
+      </ul>
+    </div>
+    <div class="col-span-3">
+      <p>&copy; 2024 Mariane bouchard. Tous droits réservés. </p>
+    </div>
+  </footer>
   <script type="module" src="./assets/js/main.js" defer></script>
 </body>
 
