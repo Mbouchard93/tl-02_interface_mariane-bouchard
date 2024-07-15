@@ -7,7 +7,7 @@ export default {
     colors: {
       'grey': '#B6B5B3',
       'yellow': '#E6DB35',
-      'withe': '#fff',
+      'white': '#fff',
       'black': '#000',
       'red': '#910019'
     },

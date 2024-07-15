@@ -1,15 +1,17 @@
 import Product from "./Product.js";
-import productimg1 from "../img/products/product01.svg"
-import productimg2 from "../img/products/product02.svg"
-import productimg3 from "../img/products/product03.svg"
-import productimg4 from "../img/products/product04.svg"
-import productimg5 from "../img/products/product05.svg"
-import productimg6 from "../img/products/product06.svg"
-import productimg7 from "../img/products/product07.svg"
-import productimg8 from "../img/products/product08.svg"
-import productimg9 from "../img/products/product09.svg"
+import productimg1 from "../img/products/product01.svg";
+import productimg2 from "../img/products/product02.svg";
+import productimg3 from "../img/products/product03.svg";
+import productimg4 from "../img/products/product04.svg";
+import productimg5 from "../img/products/product05.svg";
+import productimg6 from "../img/products/product06.svg";
+import productimg7 from "../img/products/product07.svg";
+import productimg8 from "../img/products/product08.svg";
+import productimg9 from "../img/products/product09.svg";
 
-
+/**
+ * @type {Product[]}
+ */
 const products = [
   new Product(
     "Antihero Classic Eagle",
@@ -75,7 +77,6 @@ const products = [
     "Léger, rigide et hautement sculptable. Le Drop Hammer est idéal pour tous ceux qui cherchent à pimenter leurs déplacements, à dévaler une colline douce, à se défouler sur le chemin des cours ou simplement à sortir pour une balade l'après-midi avec des amis. Monté sur chute, symétrique et rempli de merveilles ! ",
     259.95
   ),
-
 ];
 
 export default products;

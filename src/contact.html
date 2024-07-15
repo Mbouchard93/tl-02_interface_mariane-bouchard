@@ -3,10 +3,11 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>skateboards</title>
+  <link rel="icon" href="/src/assets/img/favicon.png" type="image/x-icon">
 </head>
+
 <body
   class="bg-[url('/assets/img/bg_gris.svg')] bg-center bg-cover bg-fixed grid grid-cols-4 gap-x-4 lg:grid-cols-12 lg:gap-x-5">
   <header class="col-span-4 lg:col-span-12">
@@ -26,10 +27,10 @@
         <img src="./assets/img/logo-banner/logo.svg" alt="logo skate" />
       </a>
       <ul class="hidden lg:flex gap-20 w-[60%] uppercase font-bebas text-2xl">
-        <li><a href="./index.html">Acceuil</a></li>
-        <li><a href="./produits.html">Produits</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-        <li><a href="./propos.html">à propos</a></li>
+        <li><a href="./index.html" class="hover:underline">Acceuil</a></li>
+        <li><a href="./produits.html " class="hover:underline ">Produits</a></li>
+        <li><a href="./contact.html" class="hover:underline ">Contact</a></li>
+        <li><a href="./propos.html" class="hover:underline">à propos</a></li>
       </ul>
       <div class="flex gap-5">
         <button class="hidden lg:block">
@@ -42,52 +43,59 @@
           <img data-dialog="#menu-mobile" src="./assets/img/icone/menu.svg" alt="icone de menu-mobile" />
         </button>
       </div>
-      <aside id="cart" class="dialog z-10">
-        <div class="w-[350px] bg-withe justify-self-end overlay overflow-auto flex-col">
-          <h3>Panier</h3>
-          <main class="cart__items"></main>
+      <aside id="cart" class="dialog cart z-10">
+        <div class="w-[350px] bg-white justify-self-end  overlay flex-col overflow-auto p-5 gap-4">
+          <div class="flex justify-between">
+            <h3 class="text-3xl font-bebas font-medium">Panier</h3>
+            <img src="./assets/img/icone/close.svg" class="btn--close cursor-pointer" alt="">
+          </div>
+          <main class="cart__items grid gap-10 "></main>
           <footer class="cart__total"></footer>
         </div>
       </aside>
     </nav>
   </header>
   <main class="col-span-4 grid lg:col-span-10 lg:col-start-2 lg:col-end-12 py-20">
-      <section class="grid lg:grid-cols-2 lg:max-h-[750px] gap-6 lg:gap-0 ">
-          <img class="h-full w-full  " src="./assets/img/contact.jpg" alt="">
-        <div class="px-6 flex flex-col gap-6 justify-around">
-          <h3 class="text-2xl lg:text-4xl font-raleway font-semibold ">Discute avec nos experts pour trouver ta planche idéal.</h3>
-          <p>Chez nous, les planches sont conçus pour s'adapter à ton style. Si tu souhaites apporter des modifications à ta planche, écris-nous et nous le personnaliserons selon tes besoins.</p>
-          <form class="grid template-areas-form gap-2 font-raleway font-semibold   "   method="get"  novalidate>
-            <label for="name" class="area-nom " >Nom: </label>
-            <input type="text" class="area-name h-10 rounded-md px-4 drop-shadow-md  "  id="name">
-            <label for="lastname" class="area-prenom">Prénom</label>
-            <input type="text" class="area-lastname rounded-md px-4 drop-shadow-md "  id="lastname">
-            <label for="email" class="area-adresse" name="email">Adresse courriel</label>
-            <input type="email" class="area-email rounded-md h-10 px-4 drop-shadow-md email " id="email" required >
-            <p class="area-error error text-red  "></p>
-            <label for="subject" class="area-title">Tu veux nous parler de quoi</label>
-            <input type="text" class="area-subject rounded-md h-10 px-4 drop-shadow-md " id="subject">
-            <label for="msg">Écris nous ton message</label>
-            <textarea name="" class="area-msg rounded-md h-20 resize-none px-4 drop-shadow-md " id="msg"></textarea>
-            <button class="area-btn rounded-md  bg-yellow y py-2" data-dialog="#formContact">Envoyer</button>
-            <div class="dialog" id="formContact">
-            <div class="overlay  bg-withe h-fit w-[75vw] lg:w-[35vw] place-self-center flex-col items-center gap-4 p-10 rounded-sm  ">
-              <img class="btn--close cursor-pointer top-4 right-4 absolute " src="./assets/img/icone/close.svg" alt="" />
+    <section class="grid lg:grid-cols-2 lg:max-h-[750px] gap-6 lg:gap-0 ">
+      <img class="h-full w-full  " src="./assets/img/contact.jpg" alt="">
+      <div class="px-6 flex flex-col gap-6 justify-around">
+        <h3 class="text-2xl lg:text-4xl font-raleway font-semibold ">Discute avec nos experts pour trouver ta planche
+          idéal.</h3>
+        <p>Chez nous, les planches sont conçus pour s'adapter à ton style. Si tu souhaites apporter des modifications à
+          ta planche, écris-nous et nous le personnaliserons selon tes besoins.</p>
+        <form class="grid template-areas-form gap-2 font-raleway font-semibold   " method="get" novalidate>
+          <label for="name" class="area-nom ">Nom: </label>
+          <input type="text" class="area-name h-10 rounded-md px-4 drop-shadow-md  " id="name">
+          <label for="lastname" class="area-prenom">Prénom</label>
+          <input type="text" class="area-lastname rounded-md px-4 drop-shadow-md " id="lastname">
+          <label for="email" class="area-adresse" name="email">Adresse courriel</label>
+          <input type="email" class="area-email rounded-md h-10 px-4 drop-shadow-md email " id="email" required>
+          <p class="area-error error text-red  "></p>
+          <label for="subject" class="area-title">Tu veux nous parler de quoi</label>
+          <input type="text" class="area-subject rounded-md h-10 px-4 drop-shadow-md " id="subject">
+          <label for="msg">Écris nous ton message</label>
+          <textarea name="" class="area-msg rounded-md h-20 resize-none px-4 drop-shadow-md " id="msg"></textarea>
+          <button class="area-btn rounded-md  bg-yellow y py-2 font-semibold hover:bg-black hover:text-yellow"
+            data-dialog="#formContact">Envoyer</button>
+          <div class="dialog" id="formContact">
+            <div
+              class="overlay  bg-white h-fit w-[75vw] lg:w-[35vw] place-self-center flex-col items-center gap-4 p-10 rounded-sm  ">
+              <img class="btn--close cursor-pointer top-4 right-4 absolute " src="./assets/img/icone/close.svg"
+                alt="" />
               <h4 class="self-start">Message envoyé</h4>
-              <p>Merci <span class="name"></span> nous avons bien reçu votre courriel. Nous reviendrons vers vous rapidement.</p>
-
+              <p>Merci <span class="name"></span> nous avons bien reçu votre courriel. Nous reviendrons vers vous
+                rapidement.</p>
               <img src="./assets/img/mail.png" class="w-[250px] " alt="">
-
             </div>
-    
-            </div>
-          </form>
-        </div>
+          </div>
+        </form>
+      </div>
 
-      </section>
+    </section>
   </main>
-  <footer class="col-span-4 lg:col-span-12 flex flex-col md:grid md:grid-cols-3 p-10 bg-grey gap-6 font-raleway font-medium ">
-    <nav >
+  <footer
+    class="col-span-4 lg:col-span-12 flex flex-col md:grid md:grid-cols-3 p-10 bg-grey gap-6 font-raleway font-medium ">
+    <nav>
       <img class="h-10 place-self-start" src="./assets/img/logo-banner/logo.svg" alt="">
       <ul class="grid">
         <li><a href="./index.html">Acceuil</a></li>
@@ -98,35 +106,39 @@
     </nav>
     <form class="grid h-fit gap-y-2 lg:place-self-center w-fit lg:w-2/3" novalidate>
       <label for="email" class="text-xl">Incris toi à notre infolettre</label>
-      <input type="email" id="email" class="h-10 px-4 rounded-md email" name="email" placeholder="Adresse courriel" required>
+      <input type="email" id="email" class="h-10 px-4 rounded-md email" name="email" placeholder="Adresse courriel"
+        required>
       <p class="error text-red "></p>
-      <button class="bg-yellow rounded-md py-2  " data-dialog="#formProduct">Envoyer</button>
+      <button class="bg-yellow rounded-md py-2 font-semibold hover:bg-black hover:text-yellow  "
+        data-dialog="#formProduct">Envoyer</button>
       <div class="dialog " id="formProduct">
-        <div class="overlay  bg-withe h-fit w-[75vw] lg:w-[35vw] place-self-center flex-col items-center gap-4 p-10 rounded-sm ">
+        <div
+          class="overlay  bg-white h-fit w-[75vw] lg:w-[35vw] place-self-center flex-col items-center gap-4 p-10 rounded-sm ">
           <img class="btn--close cursor-pointer top-4 right-4 absolute " src="./assets/img/icone/close.svg" alt="" />
           <h4 class="self-start">Merci de vous être inscrit à notre infolettre !</h4>
-          <p>Nous sommes ravis de vous compter parmi nos abonnés. Vous recevrez prochainement des nouvelles, des offres exclusives et des informations sur nos derniers produits.</p>
+          <p>Nous sommes ravis de vous compter parmi nos abonnés. Vous recevrez prochainement des nouvelles, des offres
+            exclusives et des informations sur nos derniers produits.</p>
           <img src="./assets/img/mail.png" class="w-[250px] " alt="">
         </div>
       </div>
     </form>
     <div class="justify-self-end flex flex-col justify-around">
-      <div class="flex flex-col justify-around" >
+      <div class="flex flex-col justify-around">
         <h4>Contact-nous</h4>
         <a href="mailto:info@skate.com">info@skate.com</a>
         <a href="tel:=+514-249-2378">514-249-2378</a>
       </div>
-    <ul class="flex gap-4  w-full lg:col-span-2">
-      <li><a href="https://www.facebook.com/"><img src="./assets/img/follow/Facebook.svg" alt=""></a></li>
-      <li><a href="https://www.instagram.com/"><img src="./assets/img/follow/Instagram.svg" alt=""></a></li>
-      <li><a href="https://www.youtube.com/"><img src="./assets/img/follow/YouTube.svg" alt=""></a></li>
-    </ul>
-  </div>
-  <div class="col-span-3">
-    <p>&copy; 2024 Mariane bouchard. Tous droits réservés. </p>
+      <ul class="flex gap-4  w-full lg:col-span-2">
+        <li><a href="https://www.facebook.com/"><img src="./assets/img/follow/Facebook.svg" alt=""></a></li>
+        <li><a href="https://www.instagram.com/"><img src="./assets/img/follow/Instagram.svg" alt=""></a></li>
+        <li><a href="https://www.youtube.com/"><img src="./assets/img/follow/YouTube.svg" alt=""></a></li>
+      </ul>
+    </div>
+    <div class="col-span-3">
+      <p>&copy; 2024 Mariane bouchard. Tous droits réservés. </p>
 
-  </div>
-</footer>
+    </div>
+  </footer>
   <script type="module" src="./assets/js/main.js" defer></script>
 
 </body>

@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>skateboards</title>
+  <link rel="icon" href="/src/assets/img/favicon.png" type="image/x-icon">
 </head>
 
 <body
@@ -27,10 +27,10 @@
         <img src="./assets/img/logo-banner/logo.svg" alt="logo skate" />
       </a>
       <ul class="hidden lg:flex gap-20 w-[60%] uppercase font-bebas text-2xl">
-        <li><a href="./index.html">Acceuil</a></li>
-        <li><a href="./produits.html">Produits</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-        <li><a href="./propos.html">à propos</a></li>
+        <li><a href="./index.html" class="hover:underline">Acceuil</a></li>
+        <li><a href="./produits.html " class="hover:underline ">Produits</a></li>
+        <li><a href="./contact.html" class="hover:underline ">Contact</a></li>
+        <li><a href="./propos.html" class="hover:underline">à propos</a></li>
       </ul>
       <div class="flex gap-5">
         <button class="hidden lg:block">
@@ -40,13 +40,16 @@
           <img data-dialog="#cart" src="./assets/img/icone/cart.svg" alt="" />
         </button>
         <button class="lg:hidden" aria-label="Ouvrir le menu">
-          <img data-dialog="#menu-mobile" src="./assets/img/icone/menu.svg" alt="icone de menu-mobile" />
+          <img data-dialog="#menu-mobile" src="./assets/img/icone/menu.svg" alt="icone de menu-mobile " />
         </button>
       </div>
-      <aside id="cart" class="dialog z-10">
-        <div class="w-[350px] bg-withe justify-self-end overlay flex-col overflow-auto">
-          <h3>Panier</h3>
-          <main class="cart__items"></main>
+      <aside id="cart" class="dialog cart z-10">
+        <div class="w-[350px] bg-white justify-self-end  overlay flex-col overflow-auto p-5 gap-4 ">
+          <div class="flex justify-between">
+            <h3 class="text-3xl font-bebas font-medium">Panier</h3>
+            <img src="./assets/img/icone/close.svg" class="btn--close cursor-pointer" alt="">
+          </div>
+          <main class="cart__items grid gap-10 "></main>
           <footer class="cart__total"></footer>
         </div>
       </aside>
@@ -56,7 +59,7 @@
     <h3 class="font-raleway font-bold uppercase text-[65px] col-span-10 ">à propos</h3>
     <section
       class="place-self-center grid gap-y-20 col-span-4 lg:grid-cols-12  lg:gap-x-5 lg:col-start-2 lg:col-end-11   ">
-      <div class=" bg-black p-10 bg-opacity-50 text-withe rounded-md lg:col-span-8 lg:row-start-1 flex flex-col gap-4 ">
+      <div class=" bg-black p-10 bg-opacity-50 text-white rounded-md lg:col-span-8 lg:row-start-1 flex flex-col gap-4 ">
         <h4 class="text-2xl font-raleway font-semibold ">L'enseignant</h4>
         <figure class="h-80 w-80 py-4">
           <img class="w-full h-full" src="./assets/img/about/about1.png" alt="">
@@ -72,7 +75,8 @@
           notions plus faciles
           deviennent alors plus claires.</p>
       </div>
-      <div class=" bg-black p-10 bg-opacity-50 text-withe rounded-md lg:col-span-8 lg:col-start-5 lg:row-start-2 flex flex-col gap-4">
+      <div
+        class=" bg-black p-10 bg-opacity-50 text-white rounded-md lg:col-span-8 lg:col-start-5 lg:row-start-2 flex flex-col gap-4">
         <h3 class="text-2xl font-raleway font-semibold ">Tutorielle FromScratch</h3>
         <figure class=" w-fit py-10">
           <img class="h-full w-full" src="./assets/img/about/about2.jpg" alt="">
@@ -93,7 +97,7 @@
           Ce dernier ma été très utile lorsque le DOM n’est pas encore chargé et que j'essaie d’appeler une fonction ou
           une méthode.</p>
       </div>
-      <div class=" bg-black p-10 bg-opacity-50 text-withe rounded-md lg:col-span-8 lg:col-start-1 lg:row-start-3">
+      <div class=" bg-black p-10 bg-opacity-50 text-white rounded-md lg:col-span-8 lg:col-start-1 lg:row-start-3">
         <h3 class="text-2xl font-raleway font-semibold ">MDN</h3>
         <figure class=" w-fit">
           <img class="h-full w-full" src="./assets/img/about/about3.png" alt="">
@@ -140,7 +144,8 @@
           </li>
         </ul>
       </div>
-      <div class=" bg-black p-10 bg-opacity-50 text-withe rounded-md lg:col-span-8 lg:col-start-5 lg:row-start-4 flex flex-col gap-4">
+      <div
+        class=" bg-black p-10 bg-opacity-50 text-white rounded-md lg:col-span-8 lg:col-start-5 lg:row-start-4 flex flex-col gap-4">
         <h3 class="text-2xl font-raleway font-semibold ">chatGpt </h3>
         <figure class=" w-fit py-4">
           <img class="h-full w-full" src="./assets/img/about/about4.png" alt="">
@@ -153,15 +158,16 @@
           l’utilisateur vers sa boîte mail, ou certains types d’input dont j’ai besoin sans nécessairement connaître
           leur type.</p>
       </div>
-      <div class=" bg-black p-10 bg-opacity-50 text-withe rounded-md lg:col-span-8 lg:col-start-1 lg:row-start-5">
+      <div class=" bg-black p-10 bg-opacity-50 text-white rounded-md lg:col-span-8 lg:col-start-1 lg:row-start-5">
         <h3 class="text-2xl font-raleway font-semibold ">Console.log()</h3>
         <figure class="  w-[250px] lg:w-[375px]">
           <img class="h-full w-full" src="./assets/img/about/about5.png" alt="">
         </figure>
-        <p>Une dernière méthode que j’utilise énormément pour comprendre mon code est le console.log(). Je l’utilise lorsque je ne comprends pas
+        <p>Une dernière méthode que j’utilise énormément pour comprendre mon code est le console.log(). Je l’utilise
+          lorsque je ne comprends pas
           exactement ce qu’une variable me renvoie ou pour comprendre plus en profondeur ce que je manipule. J’utilise
           aussi beaucoup l’inspecteur pour voir la structure réelle de mon HTML, étant donné qu’il est injecté par
-          JavaScript. Souvent, j’ai compris des bogues parce qu’un certain élément HTML portait l’attribut que je
+          JavaScript. Souvent, j’ai compris des bogues parce qu’un certain élément HTML portait pas l’attribut que je
           voulais insérer, ou je réalisais que je ne ciblais pas le bon élément.</p>
       </div>
     </section>
@@ -182,10 +188,11 @@
       <input type="email" id="email" class="h-10 px-4 rounded-md email" name="email" placeholder="Adresse courriel"
         required>
       <p class="error text-red "></p>
-      <button class="bg-yellow rounded-md py-2  " data-dialog="#formProduct">Envoyer</button>
+      <button class="bg-yellow rounded-md py-2 font-semibold hover:bg-black hover:text-yellow  "
+        data-dialog="#formProduct">Envoyer</button>
       <div class="dialog " id="formProduct">
         <div
-          class="overlay  bg-withe h-fit w-[75vw] lg:w-[35vw] place-self-center flex-col items-center gap-4 p-10 rounded-sm ">
+          class="overlay  bg-white h-fit w-[75vw] lg:w-[35vw] place-self-center flex-col items-center gap-4 p-10 rounded-sm ">
           <img class="btn--close cursor-pointer top-4 right-4 absolute " src="./assets/img/icone/close.svg" alt="" />
           <h4 class="self-start">Merci de vous être inscrit à notre infolettre !</h4>
           <p>Nous sommes ravis de vous compter parmi nos abonnés. Vous recevrez prochainement des nouvelles, des offres
