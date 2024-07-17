@@ -78,7 +78,7 @@ btnAdd.forEach(btn => {
      */
     const product = products[productIndex];
     /**
-     * @type {undefined | undefined} 
+     * @type {undefined | Lineitems} 
      * 
      */
     let lineItem = cart.lineItems.find(item => item.product === product);
