@@ -1,6 +1,6 @@
 import Lineitems from "./Lineitems";
-import Product from "./Product";
-import products from "./products";
+
+// code inutile -0.5
 
 export default class Cart {
     constructor() {

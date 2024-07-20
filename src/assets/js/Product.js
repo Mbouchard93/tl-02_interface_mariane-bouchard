@@ -1,7 +1,5 @@
-import products from "./products";
+// code inutile -0.5
 import btnimg from '../img/icone/close.svg';
-import Lineitems from "./Lineitems";
-import Cart from "./Cart";
 
 /**
  * @param {string} name
